@@ -1,0 +1,169 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>El primer script</title>
+    <style type="text/css">
+        body {
+            font-family: arial, helvetica;
+        }
+
+        .box {
+            width: 160px;
+            height: 160px;
+            border: thin solid silver;
+            padding: .5em;
+            float: left;
+            margin-right: 15px;
+        }
+
+        .box h1 {
+            margin: 0;
+        }
+
+        form {
+            width: 600px;
+            margin: 20px auto 0 auto;
+        }
+
+        label {
+            float: left;
+            width: 200px;
+            font-weight: bold;
+        }
+
+        label[for="registro_condiciones"] {
+            float: none;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            width: 360px;
+        }
+
+        input[type="checkbox"] {
+            margin-left: 200px;
+        }
+
+        input[type="submit"] {
+            margin: 20px 0 0 200px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Ejercicio 1 -->
+    <p>Esta página contiene el primer script</p>
+
+    <!-- Ejercicio 15 -->
+    <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas
+        nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum
+        et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede.
+        <span class="adicional oculto">
+            Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut,
+            rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere
+            ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque. Donec lacus
+            neque, vehicula in, eleifend vitae, venenatis ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam
+            ullamcorper. Duis accumsan metus eu urna. Aenean vitae enim. Integer lacus. Vestibulum venenatis erat eu
+            odio. Praesent id metus.
+        </span>
+    </p>
+    <a id="enlace1" href="#" onclick="muestra(); return false;">Seguir leyendo</a>
+
+    <!-- Ejercicio 16 -->
+    <ul id="lista">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetuer adipiscing elit</li>
+        <li>Sed mattis enim vitae orci</li>
+        <li>Phasellus libero</li>
+        <li>Maecenas nisl arcu</li>
+    </ul>
+    <input type="button" value="Añadir elemento" onclick="anade();">
+
+    <!-- Ejercicio 17 -->
+    <div style="display: block;">
+        <p id="contenido_1">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero.
+            Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere
+            vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor,
+            pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus
+            ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at
+            posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.
+        </p>
+        <a class="enlace_1" href="javascript:toggleContenido('contenido_1', 'enlace_1')"">Ocultar contenidos</a>
+    </div>
+    <br>
+    <div style="display: block;">
+        <p  id="contenido_2">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero.
+            Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere
+            vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor,
+            pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus
+            ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at
+            posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.
+        </p>
+        <a class="enlace_2" href="javascript:toggleContenido('contenido_2', 'enlace_2')">Ocultar contenidos</a>
+    </div>
+    <br>
+    <div style="display: block;">
+        <p id="contenido_3">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero.
+            Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere
+            vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor,
+            pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus
+            ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at
+            posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.
+        </p>
+        <a class="enlace_3" href="javascript:toggleContenido('contenido_3', 'enlace_3')">Ocultar contenidos</a>
+    </div>
+
+    <!-- Ejercicio 18 -->
+    <div id="raton" class="box">
+        <h1>Ratón</h1>
+        <div></div>
+    </div>
+    <div id="teclado" class="box">
+        <h1>Teclado</h1>
+        <div></div>
+    </div>
+
+    <!-- Ejercicio 19 -->
+
+    <div class="box">
+        <h1>Posición</h1>
+        <span class="posicion"></span>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- Ejercicio 21 -->
+    <form action="servidor.php" method="POST" id="registro">
+        <fieldset>
+            <legend>Registro</legend>
+            <label for="registro_nombre">Nombre:</label><input type="text" name="nombre" id="registro_nombre">
+            <label for="registro_apellidos">Apellido:</label><input type="text" name="apellido" id="registro_apellido">
+            <label for="registro_email">Email:</label><input type="text" name="email" id="registro_email">
+            <label for="registro_password">Password:</label><input type="password" name="password"
+                id="registro_password">
+            <label for="registro_comentarios">Comentarios:</label><textarea name="comentarios" id="registro_comentarios"
+                rows="10"></textarea>
+            <input type="checkbox" name="condiciones" id="registro_condiciones" value="1"><label
+                for="registro_condiciones">Acepto las condiciones del servicio.</label>
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+</body>
+
+<!-- Ejercicio 1 -->
+<!-- Se llama al archivo codigo.js que contiene los dos console.log -->
+<script src="./codigo.js"></script>
+<!-- Mensaje de aviso para los navegadores que no tengan activado el soporte de JavaScript -->
+<noscript>
+    <p>Por favor, habilite JavaScript en su navegador para ver el contenido completo de esta página.</p>
+</noscript>
+
+</html>
